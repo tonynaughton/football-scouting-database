@@ -35,4 +35,4 @@ players.
 
 ### Enhanced ER Diagram
 
-[Enhanced ER Diagram](image/enhanced-er-diagram.jpg)
+![Enhanced ER Diagram](image/enhanced-er-diagram.jpg)
