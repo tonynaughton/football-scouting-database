@@ -1,0 +1,27 @@
+Player (playerID, firstName, lastName, street, town, county, nationaility, position, dob, height, weight, clubID, agentID)
+Primary key playerID
+Foreign key clubID references Club (clubID)
+Foreign key agentID references Individual (agentID) and Agency (agentID)
+
+Report (reportID, reportDate, pace, shooting, passing, dribbling, defending, physicality, goalkeeping, playerID, scoutID)
+Primary key reportID
+Foreign key playerID references Player (playerID)
+Foreign key scoutID references Scout (scoutID)
+
+Scout (scoutID, firstName, lastName, street, tow, county, contactNumber, emailAddress, clubID)
+Primary key scoutID
+Foreign key clubID references Club (clubID)
+
+Club (clubID, clubName, street, town, county, contactNumber, emailAddress)
+Primary key clubID
+
+Agent (agentID, street, town, county, contactNumber, emailAddress)
+Primary key agentID
+
+Individual (agentID, firstName, lastName)
+Primary key agentID
+Foreign key agentID references Agent (agentID)
+
+Agency (agentID, agencyName)
+Primary key agentID
+Foreign key agentID references Agent (agentID)
